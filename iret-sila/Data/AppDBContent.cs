@@ -17,7 +17,7 @@ namespace iret_sila.Data
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5433;Database=usersdb;Username=postgres;Password=salavat");
+            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=testdb;Username=postgres;Password=salavat");
         }
     }
 }

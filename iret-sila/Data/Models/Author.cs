@@ -14,7 +14,7 @@ namespace iret_sila.Data.Models
         public List<Song> Songs { get; set; }//у автора много песен
 
         public int musicDirectionId { get; set; }
-        public virtual Author Authors { get; set; }//у автора только одно направление
+        public virtual MusicDirection MusicDirection { get; set; }// у каждого автора одно направление
         public bool IsFavourite { get; set; }
     }
 }

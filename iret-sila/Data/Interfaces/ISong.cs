@@ -8,8 +8,8 @@ namespace iret_sila.Data.Interfaces
 {
     interface ISong
     {
-        IEnumerable<Song> getAllSong { get; set; }//выдаёт все треки
-        IEnumerable<Song> getFavSong { get; set; }// выдаёт только избранные треки
+        IEnumerable<Song> getAllSong { get;  }//выдаёт все треки
+        IEnumerable<Song> getFavSong { get;  }// выдаёт только избранные треки
         Song getObjectSong(int songId);// вернуть конкректный трек по id
     }
 }
