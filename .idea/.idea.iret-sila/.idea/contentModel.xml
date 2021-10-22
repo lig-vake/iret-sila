@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\projects\bars\music\iret-sila" t="IncludeFlat">
+      <e p="iret-sila" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="WeatherForecastController.cs" t="Include" />
+        </e>
+        <e p="Data" t="Include">
+          <e p="AppDBContent.cs" t="Include" />
+          <e p="Interfaces" t="Include">
+            <e p="IAuthor.cs" t="Include" />
+            <e p="IMusicDirection.cs" t="Include" />
+            <e p="ISong.cs" t="Include" />
+          </e>
+          <e p="Models" t="Include">
+            <e p="Author.cs" t="Include" />
+            <e p="MusicDirection.cs" t="Include" />
+            <e p="Song.cs" t="Include" />
+          </e>
+          <e p="Repository" t="Include">
+            <e p="AuthorRepository.cs" t="Include" />
+            <e p="MusicDirectionRepository.cs" t="Include" />
+            <e p="SongRepository.cs" t="Include" />
+          </e>
+        </e>
+        <e p="dbSettings.json" t="Include" />
+        <e p="iret-sila.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net5.0" t="Include">
+              <e p="iret-sila.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="WeatherForecast.cs" t="Include" />
+      </e>
+      <e p="iret-sila.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\user\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\user\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_iret-sila.1863065256.00" t="ExcludeRecursive" />
+  </component>
+</project>
