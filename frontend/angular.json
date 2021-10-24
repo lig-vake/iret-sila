@@ -29,7 +29,10 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/script1.js",
+              "src/assets/script2.js"
+            ]
           },
           "configurations": {
             "production": {
