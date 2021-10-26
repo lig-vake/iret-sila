@@ -1,0 +1,9 @@
+h1{
+  text-align: center;
+}
+#searching{
+  margin-left: 25px;
+}
+ul#fotos li{
+  display: inline;
+}

@@ -1,0 +1,19 @@
+.foto{
+  height: 300px;
+  width: 300px;
+  padding-left: 50px;
+}
+.fig{
+  padding-left: 100px;
+}
+.butt{
+  padding-left: 100px;
+}
+
+p {
+  text-align: justify;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
