@@ -5,13 +5,19 @@ import { AppComponent } from './app.component';
 import { RecordPlayerComponent } from './components/record-player/record-player.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CatalogComponent } from './components/catalog/catalog.component';
+import { AlbomComponent } from './components/catalog/albom/albom.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecordPlayerComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CatalogComponent,
+    AlbomComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule
