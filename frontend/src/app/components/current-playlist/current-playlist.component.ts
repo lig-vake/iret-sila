@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./current-playlist.component.css']
 })
 export class CurrentPlaylistComponent implements OnInit {
+  // https://cdndl.zaycev.net/track/24640159/6pGxk5jCuxPqWhZPLrt5nc4WoTWN5rz5XoaT354RQCCEmTHHwr2kdXsp3KAC5naudh6VRTyLdutoUBvrpM7kfv14UjCFiSfYxGTPgz9W8L5FmzR8XHNTi5WptZrYmcdfbt6fDgwAHqcyWmKMRAJcKMtBBnAvuRpQ7aK226u6vpuBqVHzr3JEQ1iaC6KPTRoNBF3VxG11o51edGGRo4Ui7U6LD32BZAFtRRZvhDFjcgKmSB54Z6FoQZZu9bi52rzRoV7xfvPFsRrvVZ4wDQ3tMgvtTqH1aSsDwbR5QQtEdpTGn8cJqkRexqLqAAK8KGqM817i5pfgsufgYS3CnxrvwZbwks1wkF
+  audioSrc: string = '';
+
+  changeAudio(src: string) {
+    this.audioSrc = src;
+  }
 
   constructor() { }
 

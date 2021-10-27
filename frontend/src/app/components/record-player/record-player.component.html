@@ -2,26 +2,26 @@
 <!-- This is a record player -- music will be played -->
 
 <body>
-
+  <div class="body-wrapper">
     <div class="wrap">
-
-    <img class="bkd" id="player" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/390561/player-2.png" alt="">
-    <img class="bkd" id="record" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/390561/record-2.png" alt="">
-    <img class="bkd" id="needle" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/390561/needle-2.png" alt="">
-    <p>
-      Click Record Players Arm <br>To Turn record on/off.
-    </p>
-    <div class="bkd">
-    <div class="shadow"></div>
+      <img class="bkd" id="player" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/390561/player-2.png" alt="">
+      <img class="bkd" id="record" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/390561/record-2.png" alt="">
+      <img class="bkd" id="needle" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/390561/needle-2.png" alt="">
+      <p>
+        Click Record Players Arm <br>To Turn record on/off.
+      </p>
+      <div class="bkd">
+        <div class="shadow"></div>
+      </div>
+      <div class="bkd">
+        <div class="btn-on" (click)="getPlayFunc()"></div>
+      </div>
+      <div class="bkd">
+        <div class="btn-off" (click)="getPauseFunc()"></div>
+      </div>
     </div>
-    <div class="bkd">
-    <div class="btn-on" (click)="getPlayFunc()"></div>
-  </div>
-    <div class="bkd">
-    <div class="btn-off" (click)="getPauseFunc()"></div>
-  </div>
-
-</div>
     <audio class='play-1' src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/390561/player-sound.wav" loop></audio>
-    <audio class='play-2' src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/390561/Any-Colour-You-Like.mp3" loop></audio>
+    <audio class='play-2' src="{{ src }}" loop></audio>
+  <!--    <audio class='play-2' src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/390561/Any-Colour-You-Like.mp3" loop></audio>-->
+</div>
 </body>
