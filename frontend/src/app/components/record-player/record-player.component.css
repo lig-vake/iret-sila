@@ -48,7 +48,7 @@ body {
 }
 
 .spin {
-  animation: spin .7s linear 0s infinite forwards;
+  animation: spin 0.7s linear 0s infinite forwards;
 }
 
 @keyframes spin {

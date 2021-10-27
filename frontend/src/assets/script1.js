@@ -1,7 +1,7 @@
 function getPlay(){
   document.querySelector("#needle").classList.add("needle-on");
   document.querySelector(".shadow").classList.add("shadow-rotate");
-  document.querySelector("p").style.display = 'none';
+  document.querySelector("#text").style.display = 'none';
   document.querySelector("#needle").style.background = 'transparent';
   document.querySelector('.btn-on').style.display = '';
 

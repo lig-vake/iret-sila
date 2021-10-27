@@ -11,6 +11,7 @@ import { AlbomComponent } from './components/catalog/albom/albom.component';
 import { CartComponent } from './components/cart/cart.component';
 import { SongsAndAlbumsComponent } from './components/songs-and-albums/songs-and-albums.component';
 import { CurrentPlaylistComponent } from './components/current-playlist/current-playlist.component';
+import { AlbumPageComponent } from './components/album-page/album-page.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CurrentPlaylistComponent } from './components/current-playlist/current-
     CartComponent,
     FooterComponent,
     SongsAndAlbumsComponent,
-    CurrentPlaylistComponent
+    CurrentPlaylistComponent,
+    AlbumPageComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,7 @@ import { CurrentPlaylistComponent } from './components/current-playlist/current-
       {path: 'catalog', component: CatalogComponent},
       {path: 'cart', component: CartComponent},
       {path: 'albom', component: AlbomComponent},
+      {path: 'album-page', component: AlbumPageComponent},
     ]),
   ],
   providers: [],

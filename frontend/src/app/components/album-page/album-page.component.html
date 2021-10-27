@@ -1,0 +1,78 @@
+<app-header></app-header>
+<div id="wrap">
+     <!-- Левая часть страницы -->
+    <div id="left_col">
+
+        <div id="author">
+            <h2> Имя автора </h2>
+        </div>
+
+        <!-- Раскрывающееся поле с картинками автора -->
+
+        <div class="demo">
+            <input class="hide" id="hd-1" type="checkbox">
+            <label for="hd-1"> Фотографии альбома </label>
+            <div>
+                <img class="images" src="https://t2.genius.com/unsafe/220x220/https%3A%2F%2Fimages.genius.com%2F9f30798fa12fa954f1fa88393cc2b657.1000x1000x1.jpg">
+                <img class="images" src="https://i1.sndcdn.com/artworks-000232634900-nf5ukl-t500x500.jpg">
+                <img class="images" src="https://pesni.life/pic/20/85/208566.400x400.jpg">
+                <img class="images" src="https://s.mxmcdn.net/images-storage/albums4/4/4/0/3/4/7/46743044_800_800.jpg">                
+            </div>
+       
+            <input class="hide" id="hd-2" type="checkbox">
+            <label for="hd-2"> Информация об авторе </label>
+            <div>
+                <p> Здесь можно будет увидеть информацию об авторе, если нам будет не лень её добавлять </p>
+            </div>
+        </div>
+
+         <!-- Список треков альбома -->
+
+        <div class="track-container">
+      <a class="track"
+         (click)="changeAudio('https://cdndl.zaycev.net/track/24640159/6pGxk5jCuxPqWhZPLrt5nc4WoTWN5rz5XoaT354RQCCEmTHHwr2kdXsp3KAC5naudh6VRTyLdutoUBvrpM7kfv14UjCFiSfYxGTPgz9W8L5FmzR8XHNTi5WptZrYmcdfbt6fDgwAHqcyWmKMRAJcKMtBBnAvuRpQ7aK226u6vpuBqVHzr3JEQ1iaC6KPTRoNBF3VxG11o51edGGRo4Ui7U6LD32BZAFtRRZvhDFjcgKmSB54Z6FoQZZu9bi52rzRoV7xfvPFsRrvVZ4wDQ3tMgvtTqH1aSsDwbR5QQtEdpTGn8cJqkRexqLqAAK8KGqM817i5pfgsufgYS3CnxrvwZbwks1wkF')">
+        <img class="play-img" src="./assets/svg/play-button.svg">
+        <img class="track-img" src="https://t2.genius.com/unsafe/220x220/https%3A%2F%2Fimages.genius.com%2F9f30798fa12fa954f1fa88393cc2b657.1000x1000x1.jpg">
+        <strong class="track-text">
+          <div class="track-name">Infinite Tsukuyomi</div>
+          <div> – </div>
+          <div class="track-author">ROCKET</div>
+        </strong>
+      </a>
+      <a class="track"
+         (click)="changeAudio('//dl.muzonovs.ru/files/music/2020/07/1-2-3-4-5-6-7-8-m-s-in-my-bank-account-21-savage-tik-tok.mp3')">
+        <img class="play-img" src="./assets/svg/play-button.svg">
+        <img class="track-img" src="https://i1.sndcdn.com/artworks-000232634900-nf5ukl-t500x500.jpg">
+        <strong class="track-text">
+          <div class="track-name">Bank Account</div>
+          <div> – </div>
+          <div class="track-author">21 Savage</div>
+        </strong>
+      </a>
+      <a class="track"
+         (click)="changeAudio('https://pesni.life/files/10981333c07f4/Vowl-her.mp3')">
+        <img class="play-img" src="./assets/svg/play-button.svg">
+        <img class="track-img" src="https://pesni.life/pic/20/85/208566.400x400.jpg">
+        <strong class="track-text">
+          <div class="track-name">her</div>
+          <div> – </div>
+          <div class="track-author">Vowl.</div>
+        </strong>
+      </a>
+      <a class="track"
+         (click)="changeAudio('https://cdn.muzladaz.ru/uploads/files/2020-06/1592567746_iann-dior-gone-girl.mp3')">
+        <img class="play-img" src="./assets/svg/play-button.svg">
+        <img class="track-img" src="https://s.mxmcdn.net/images-storage/albums4/4/4/0/3/4/7/46743044_800_800.jpg">
+        <strong class="track-text">
+          <div class="track-name">gone girl</div>
+          <div> – </div>
+          <div class="track-author">iann dior</div>
+        </strong>
+      </a>
+        </div>
+    </div>
+     
+    <!-- Плеер - правая сторона страницы -->
+    
+    <app-record-player id="right_col" [src]="audioSrc"></app-record-player>
+</div>
