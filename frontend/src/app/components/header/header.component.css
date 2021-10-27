@@ -1,13 +1,12 @@
 header {
   width: 100%;
-  height: 56px;
+  height: 60px;
   /*border-bottom: #95a5a6 1px solid;*/
   box-shadow: 0 0 7px 0 #95a5a6;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: larger;
-  font-family: "Roboto Thin", sans-serif;
 }
 .header-menu {
   margin: 0 0 0 60px;

@@ -1,0 +1,65 @@
+.label-centered {
+  text-align: center;
+}
+
+main {
+  padding: 30px 20px;
+  display: flex;
+  margin-bottom: 70px;
+}
+
+a {
+  text-decoration: none;
+  color: #8e44ad;
+}
+
+.tracks-wrapper {
+  width: 50%;
+  padding: 0 20px;
+}
+.track-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.track {
+  height: 70px;
+  width: 95%;
+  background: #ecf0f1;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.track:hover {
+  background: #dfe6e9;
+}
+.play-img {
+  height: 30%;
+  margin-left: 20px;
+}
+.track-img {
+  margin-left: 20px;
+  height: 70%;
+  border-radius: 3px;
+}
+.track-text {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.track-name {
+  font-size: large;
+}
+.track-author {
+  color: #3498db;
+}
+
+.player {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.player-svg {
+  width: 70%;
+}
