@@ -12,6 +12,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { SongsAndAlbumsComponent } from './components/songs-and-albums/songs-and-albums.component';
 import { CurrentPlaylistComponent } from './components/current-playlist/current-playlist.component';
 import { AlbumPageComponent } from './components/album-page/album-page.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +26,13 @@ import { AlbumPageComponent } from './components/album-page/album-page.component
     FooterComponent,
     SongsAndAlbumsComponent,
     CurrentPlaylistComponent,
-    AlbumPageComponent
+    AlbumPageComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      {path: '', component: RecordPlayerComponent},
+      {path: '', component: HomePageComponent},
       {path: 'songs-and-albums', component: SongsAndAlbumsComponent},
       {path: 'playlist', component: CurrentPlaylistComponent},
       {path: 'catalog', component: CatalogComponent},

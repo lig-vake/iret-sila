@@ -1,0 +1,37 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap">
+</head>
+<app-header></app-header>
+
+<div id="wrap">
+    <!-- Левая часть страницы -->
+    <div id="left_col">   
+        <form>
+            <input type="text" placeholder="Искать здесь...">
+            <button type="submit"></button>
+        </form>    
+
+      <!-- начало разметки выплывающего текста -->
+
+     <div class="sp-container">
+        <div class="sp-content">
+            <!--<div class="sp-globe"></div>-->
+            <h2 class="frame" [ngClass]="{
+                frame1: count === 1,
+                frame2: count === 2,
+                frame3: count === 3,
+                frame4: count === 4,
+                frame5: count === 5
+            }">{{ greeting }}</h2>
+        </div>
+    </div>
+    
+    <!-- конец разметки выплывающего текста -->
+
+    </div>
+    
+   <!-- Плеер - правая сторона страницы -->
+   
+   <app-record-player id="right_col"></app-record-player>
+</div>
