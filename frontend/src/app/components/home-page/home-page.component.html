@@ -1,22 +1,20 @@
+<html lang="en" class="no-js">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap">
 </head>
 <app-header></app-header>
 
+<body>
+
 <div id="wrap">
     <!-- Левая часть страницы -->
-    <div id="left_col">   
-        <form>
-            <input type="text" placeholder="Искать здесь...">
-            <button type="submit"></button>
-        </form>    
+    <div id="left_col">           
 
       <!-- начало разметки выплывающего текста -->
 
      <div class="sp-container">
         <div class="sp-content">
-            <!--<div class="sp-globe"></div>-->
             <h2 class="frame" [ngClass]="{
                 frame1: count === 1,
                 frame2: count === 2,
@@ -29,9 +27,132 @@
     
     <!-- конец разметки выплывающего текста -->
 
+	<form>
+		<input type="text" placeholder="Введите название трека, настройте фильтры поиска...">
+		<button class="search" type="submit"></button>
+		<button class="options" type="filter"></button>
+		
+	</form>  
+
+    <!-- начало разметки списка альбомов -->
+
+    
+		<svg class="hidden">
+			<!-- made with Icomoon.io, Icons from http://www.entypo.com/ and https://icomoon.io/ -->
+			<defs>
+				<symbol id="icon-lp-mini" viewBox="0 0 800 800">
+					
+					<g style="fill: #181819; stroke: #141415; stroke-width: 1.5;">
+						<circle cx="400" cy="400" r="380" />
+						<circle cx="400" cy="400" r="370" />
+						<circle cx="400" cy="400" r="360" />
+						<circle cx="400" cy="400" r="350" />
+						<circle cx="400" cy="400" r="340" />
+						<circle cx="400" cy="400" r="330" />
+						<circle cx="400" cy="400" r="320" />
+						<circle cx="400" cy="400" r="310" />
+						<circle cx="400" cy="400" r="300" />
+						<circle cx="400" cy="400" r="290" />
+						<circle cx="400" cy="400" r="280" />
+						<circle cx="400" cy="400" r="270" />
+						<circle cx="400" cy="400" r="260" />
+						<circle cx="400" cy="400" r="250" />
+						<circle cx="400" cy="400" r="240" />
+						<circle cx="400" cy="400" r="230" />
+						<circle cx="400" cy="400" r="220" />
+						<circle cx="400" cy="400" r="210" />
+						<circle cx="400" cy="400" r="200" />
+					</g>
+				</symbol>
+				<symbol id="icon-tonearm" viewBox="0 0 800 800">
+					<circle cx="400" cy="400" r="400" stroke="pink" fill="none" stroke-width="3"/>
+					<!--path style="fill:#7979D8;" d="M354.5,761.6l11.9,6.2c0,0,37.1-91.5,42.4-123.7c2.7-16.4-1.1-103.9-1.1-103.9V307.5h-14.7l-0.1,232.7c0,0,3.7,87.5,1.1,103.9C389,674.6,354.5,761.6,354.5,761.6z"/>
+					<rect x="379.7" y="239.7" style="fill:#474283;" width="40.7" height="67.8"/>
+					<circle style="fill:#fff;" cx="400" cy="400" r="22.6"/>
+					<path style="fill:#fff;" class="grabbable" d="M353,738.9l18.3-22.9l13.2,6.4l-6.2,28.7l-22.8,47.1c0,0-1.2,3.3-15.4-3.6c-11.2-5.4-10-8.7-10-8.7L353,738.9z"/-->
+				</symbol>
+			</defs>
+		</svg>
+		<main>
+			<div class="view view--grid view--current">
+				
+				<ul class="grid">
+					<li class="grid__item">
+						<a class="grid__link" href="#album-1" data-playlist-1="audio/songStolen_Dreams_Backing_Track.mp3,audio/songDream_On_This_Side.mp3" data-playlist-2="audio/songStolen_Dreams_Backing_Track.mp3">
+							<div class="img-wrap img-wrap--grid">
+								<svg class="lp lp--grid">
+									<use xlink:href="#icon-lp-mini"></use>
+								</svg>
+								<img class="img img--grid" src="./assets/images/album1.jpg" alt="album1" />
+							</div>
+							<span class="year">1999</span>
+							<h2 class="artist">Lena Glass</h2>
+							<h3 class="title">Blue Moments</h3>
+						</a>
+					</li>
+					<li class="grid__item grid__item--deco grid__item--deco-1">
+						<a class="grid__link" href="#album-2">
+							<div class="img-wrap img-wrap--grid">
+								<svg class="lp lp--grid">
+									<use xlink:href="#icon-lp-mini"></use>
+								</svg>
+								<img class="img img--grid" src="./assets/images/album2.jpg" alt="album2" />
+							</div>
+							<span class="year">1984</span>
+							<h2 class="artist">Peekaboo</h2>
+							<h3 class="title">Clear Nonsense</h3>
+						</a>
+					</li>
+					<li class="grid__item">
+						<a class="grid__link" href="#album-3">
+							<div class="img-wrap img-wrap--grid">
+								<svg class="lp lp--grid">
+									<use xlink:href="#icon-lp-mini"></use>
+								</svg>
+								<img class="img img--grid" src="./assets/images/album3.jpg" alt="album3" />
+							</div>
+							<span class="year">1989</span>
+							<h2 class="artist">Bright</h2>
+							<h3 class="title">Gone Again</h3>
+						</a>
+					</li>
+					<li class="grid__item">
+						<a class="grid__link" href="#album-4">
+							<div class="img-wrap img-wrap--grid">
+								<svg class="lp lp--grid">
+									<use xlink:href="#icon-lp-mini"></use>
+								</svg>
+								<img class="img img--grid" src="./assets/images/album4.jpg" alt="album4" />
+							</div>
+							<span class="year">2006</span>
+							<h2 class="artist">Dynasty</h2>
+							<h3 class="title">Sacred</h3>
+						</a>
+					</li>
+					
+				</ul>
+
+			</div>
+						
+		</main>
+		
+		<!-- 
+		- position expander: set opacity to 1, set top and left to the point where the mouse it. Animate to scale3d(1,1,1). To do the opposite, animate to scale3d(0,0,1) or scale(0.001,0.001,1).
+		- set class current of the respective single (set class single--current)
+		- then set view view--single to view view--single view--current
+		- to navigate, set new single to single--current and remove single--current from previous one (needs some adjustment)
+		-->
+	
+
+    <!-- конец разметки списка альбомов -->
+
     </div>
     
    <!-- Плеер - правая сторона страницы -->
    
-   <app-record-player id="right_col"></app-record-player>
+   <app-record-player id="right_col" [src]="audioSrc"></app-record-player>
 </div>
+
+</body>
+
+</html>

@@ -3,7 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 
 /* Общая разметка страницы - деление на правую и левую части */
-
+body {
+  overflow-x: hidden;
+  background:#6ccaa5;
+}
 #wrap {
     width:100%;
     margin:0 auto;
@@ -52,7 +55,7 @@
  .track {
    height: 70px;
    width: 100%;
-   background: #ecf0f1;
+   background: linear-gradient(to left, rgb(255, 240, 107), rgb(202, 248, 255));
    border-radius: 4px;
    display: flex;
    align-items: center;
@@ -60,7 +63,7 @@
    cursor: pointer;
  }
  .track:hover {
-   background: #dfe6e9;
+   background: #b9eaff;
  }
  .play-img {
    height: 30%;
@@ -100,7 +103,7 @@
   margin-left: 15px;
   margin-bottom: 10px;
   border-color: blue;
-  background: #ecf0f1;
+  background: linear-gradient(to right, rgb(86, 179, 255), rgb(122, 233, 233));
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -108,6 +111,10 @@
   justify-content: center;
   font-family: 'Marck Script', cursive;
   font-size: 24px;
+ }
+
+ button:hover {
+  background: #b9eaff;
  }
 
  p {

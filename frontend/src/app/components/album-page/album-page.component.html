@@ -1,10 +1,13 @@
 <app-header></app-header>
+
+<body>
+  
 <div id="wrap">
      <!-- Левая часть страницы -->
     <div id="left_col">
 
         <div style="text-align: center;">
-            <h2 style="font-family: 'Marck Script', cursive;">Имя автора / Название альбома</h2>
+            <h1 style="font-family: 'Marck Script', cursive; color: rgb(90, 0, 175);">Имя автора / Название альбома</h1>
         </div>
         
         <!-- Раскрывающееся поле с картинками автора -->
@@ -69,6 +72,16 @@
           <div class="track-author">iann dior</div>
         </strong>
       </a>
+      <a class="track"
+          (click)="changeAudio('./assets/bach.mp3')">
+         <img class="play-img" src="./assets/svg/play-button.svg">
+         <img class="track-img" src="https://i1.sndcdn.com/artworks-Ofv3CFYpmMowA9G7-5cRY7w-t500x500.jpg">
+         <strong class="track-text">
+           <div class="track-name">prelude and fuge c-moll</div>
+           <div> – </div>
+           <div class="track-author">j.s. bach / richter</div>
+         </strong>
+       </a>
         </div>
     </div>
      
@@ -76,3 +89,5 @@
     
     <app-record-player id="right_col" [src]="audioSrc"></app-record-player>
 </div>
+
+</body>

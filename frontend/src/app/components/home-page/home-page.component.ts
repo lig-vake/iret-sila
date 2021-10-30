@@ -10,7 +10,7 @@ export class HomePageComponent implements OnInit {
 
   count: Byte;
   greeting: string;
-  audioSrc: String = '';  
+  audioSrc: string = '';
 
   ngOnInit(): void {
     this.greeting = 'Здравствуйте!';
@@ -22,12 +22,12 @@ export class HomePageComponent implements OnInit {
     }, 3000);
 
     setTimeout(() => {
-      this.greeting = 'Кликните на иглу проигрывателя, чтобы послушать музыку!';
+      this.greeting = 'Включите проигрыатель или откройте один из альбомов!';
       this.count = 3;
     }, 6000);
 
     setTimeout(() => {
-      this.greeting = 'Откройте один из альбомов!';
+      this.greeting = 'Воспользуйтесь фильтрами поиска!';
       this.count = 4;
     }, 9000);
 

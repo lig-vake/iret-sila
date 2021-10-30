@@ -1,19 +1,21 @@
 header {
-  width: 100%;
+  width: 99.5%;
   height: 60px;
-  /*border-bottom: #95a5a6 1px solid;*/
+  border: #b2d80b 3px solid;
+  /*border-top: #b2d80b 3px solid;*/
   box-shadow: 0 0 7px 0 #95a5a6;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: larger;
+  background: linear-gradient(to left, rgb(49, 228, 117), rgb(122, 233, 233));
 }
 .header-menu {
   margin: 0 0 0 60px;
 }
 a {
   text-decoration: none;
-  color: black;
+  font-weight: bold;
 }
 .login-menu-wrapper {
   margin-right: 60px;
