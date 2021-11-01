@@ -7,7 +7,7 @@ import {Albom} from "../catalog/catalog.component";
 export class FilterPipe implements PipeTransform {
 
   transform(alboms: Albom[], search: string = ''): Albom[] {
-    if(!search.trim()) return alboms
+    if(!search.trim()) return alboms;
     return alboms.filter(albom => {return albom.title.includes(search)})
   }
 }

@@ -101,7 +101,7 @@ export class CatalogComponent implements OnInit {
       artist: "The Whistlespankers",
       title: "Nigel &amp; Me"
     }
-  ]
+  ];
 
 
   constructor() { }

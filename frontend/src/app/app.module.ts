@@ -16,6 +16,9 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { FilterPipe } from './components/pipes/filter.pipe';
 import {FormsModule} from "@angular/forms";
 import { ShowComponent } from './components/cart/show/show.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -47,6 +50,9 @@ import { ShowComponent } from './components/cart/show/show.component';
       {path: 'albom', component: AlbomComponent},
       {path: 'album-page', component: AlbumPageComponent},
     ]),
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,12 +4,14 @@
     <e p="C:\projects\bars\music\iret-sila" t="IncludeFlat">
       <e p="frontend\node_modules\@ampproject\remapping" t="IncludeRecursive" />
       <e p="frontend\node_modules\@angular\animations" t="IncludeRecursive" />
+      <e p="frontend\node_modules\@angular\cdk" t="IncludeRecursive" />
       <e p="frontend\node_modules\@angular\cli" t="IncludeRecursive" />
       <e p="frontend\node_modules\@angular\common" t="IncludeRecursive" />
       <e p="frontend\node_modules\@angular\compiler" t="IncludeRecursive" />
       <e p="frontend\node_modules\@angular\compiler-cli" t="IncludeRecursive" />
       <e p="frontend\node_modules\@angular\core" t="IncludeRecursive" />
       <e p="frontend\node_modules\@angular\forms" t="IncludeRecursive" />
+      <e p="frontend\node_modules\@angular\material" t="IncludeRecursive" />
       <e p="frontend\node_modules\@angular\platform-browser" t="IncludeRecursive" />
       <e p="frontend\node_modules\@angular\platform-browser-dynamic" t="IncludeRecursive" />
       <e p="frontend\node_modules\@angular\router" t="IncludeRecursive" />
@@ -49,8 +51,15 @@
       <e p="frontend\node_modules\colorette" t="IncludeRecursive" />
       <e p="frontend\node_modules\commander" t="IncludeRecursive" />
       <e p="frontend\node_modules\critters" t="IncludeRecursive" />
+      <e p="frontend\node_modules\css-select" t="IncludeRecursive" />
+      <e p="frontend\node_modules\css-what" t="IncludeRecursive" />
       <e p="frontend\node_modules\dependency-graph" t="IncludeRecursive" />
+      <e p="frontend\node_modules\dom-serializer" t="IncludeRecursive" />
+      <e p="frontend\node_modules\domelementtype" t="IncludeRecursive" />
+      <e p="frontend\node_modules\domhandler" t="IncludeRecursive" />
+      <e p="frontend\node_modules\domutils" t="IncludeRecursive" />
       <e p="frontend\node_modules\enhanced-resolve" t="IncludeRecursive" />
+      <e p="frontend\node_modules\entities" t="IncludeRecursive" />
       <e p="frontend\node_modules\es-module-lexer" t="IncludeRecursive" />
       <e p="frontend\node_modules\esbuild-wasm" t="IncludeRecursive" />
       <e p="frontend\node_modules\escalade" t="IncludeRecursive" />
@@ -71,6 +80,7 @@
       <e p="frontend\node_modules\magic-string" t="IncludeRecursive" />
       <e p="frontend\node_modules\memfs" t="IncludeRecursive" />
       <e p="frontend\node_modules\nanoid" t="IncludeRecursive" />
+      <e p="frontend\node_modules\nth-check" t="IncludeRecursive" />
       <e p="frontend\node_modules\picocolors" t="IncludeRecursive" />
       <e p="frontend\node_modules\piscina" t="IncludeRecursive" />
       <e p="frontend\node_modules\postcss" t="IncludeRecursive" />
