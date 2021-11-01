@@ -15,6 +15,7 @@ import { AlbumPageComponent } from './components/album-page/album-page.component
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { FilterPipe } from './components/pipes/filter.pipe';
 import {FormsModule} from "@angular/forms";
+import { ShowComponent } from './components/cart/show/show.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import {FormsModule} from "@angular/forms";
         AlbumPageComponent,
         HomePageComponent,
         FilterPipe,
+        ShowComponent,
     ],
   imports: [
     BrowserModule,

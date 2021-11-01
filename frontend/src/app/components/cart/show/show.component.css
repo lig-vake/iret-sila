@@ -1,0 +1,10 @@
+.card {
+  margin: 5px;
+  border: 1px dashed red;
+}
+.head {
+  text-align: center;
+}
+.btn {
+  float: right;
+}
