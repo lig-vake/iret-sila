@@ -19,6 +19,7 @@ import { ShowComponent } from './components/cart/show/show.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { TrackComponent } from './components/track/track.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { MatButtonModule } from '@angular/material/button';
         HomePageComponent,
         FilterPipe,
         ShowComponent,
+        TrackComponent,
     ],
   imports: [
     BrowserModule,
