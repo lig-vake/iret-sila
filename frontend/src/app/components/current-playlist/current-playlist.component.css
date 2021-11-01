@@ -2,10 +2,20 @@
   text-align: center;
 }
 
+.left-centered {
+  margin-left: 30px;
+  text-align: center;
+  width: 50%;
+}
+
 main {
-  padding: 30px 20px;
+  background-color: #6ccaa5;
+  min-height: 100vh;
+}
+
+section {
+  padding: 30px 20px 100px 30px;
   display: flex;
-  margin-bottom: 70px;
 }
 
 a {
@@ -55,11 +65,20 @@ a {
   color: #3498db;
 }
 
-.player {
+#player-wrapper {
   width: 50%;
+}
+.player {
+  transform: scale(0.9);
+  transform-origin: bottom right;
   display: flex;
   justify-content: center;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 671px;
 }
 .player-svg {
   width: 70%;
 }
+

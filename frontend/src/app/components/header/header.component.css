@@ -1,9 +1,9 @@
 header {
-  width: 99.5%;
+  width: 100%;
   height: 60px;
-  border: #b2d80b 3px solid;
+  border-bottom: #297255 2px solid;
   /*border-top: #b2d80b 3px solid;*/
-  box-shadow: 0 0 7px 0 #95a5a6;
+  box-shadow: 0 0 10px 0 #95a5a6;
   display: flex;
   align-items: center;
   justify-content: space-between;

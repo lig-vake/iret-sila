@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges} from '@angular/core';
+import {Component, HostListener, Input, OnChanges} from '@angular/core';
 
 declare function getPlay(): void;
 declare function getPause(): void;
@@ -12,7 +12,7 @@ export class RecordPlayerComponent implements OnChanges {
 
   getPlayFunc(){
     // Если трек не был передан, включаем стандартную песенку
-    if(this.src == '') {
+    if(this.src == '' || this.src == undefined) {
       this.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/390561/Any-Colour-You-Like.mp3';
     }
     // alert(this.src);
