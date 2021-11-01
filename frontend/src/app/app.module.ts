@@ -13,24 +13,29 @@ import { SongsAndAlbumsComponent } from './components/songs-and-albums/songs-and
 import { CurrentPlaylistComponent } from './components/current-playlist/current-playlist.component';
 import { AlbumPageComponent } from './components/album-page/album-page.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { FilterPipe } from './components/pipes/filter.pipe';
+import {FormsModule} from "@angular/forms";
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    RecordPlayerComponent,
-    HeaderComponent,
-    FooterComponent,
-    CatalogComponent,
-    AlbomComponent,
-    CartComponent,
-    FooterComponent,
-    SongsAndAlbumsComponent,
-    CurrentPlaylistComponent,
-    AlbumPageComponent,
-    HomePageComponent
-  ],
+    declarations: [
+        AppComponent,
+        RecordPlayerComponent,
+        HeaderComponent,
+        FooterComponent,
+        CatalogComponent,
+        AlbomComponent,
+        CartComponent,
+        FooterComponent,
+        SongsAndAlbumsComponent,
+        CurrentPlaylistComponent,
+        AlbumPageComponent,
+        HomePageComponent,
+        FilterPipe,
+    ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot([
       {path: '', component: HomePageComponent},
       {path: 'songs-and-albums', component: SongsAndAlbumsComponent},

@@ -1,5 +1,5 @@
-import { Byte } from '@angular/compiler/src/util';
-import { Component, OnInit } from '@angular/core';
+import {Byte} from '@angular/compiler/src/util';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
