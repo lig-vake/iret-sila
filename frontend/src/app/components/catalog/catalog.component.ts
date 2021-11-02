@@ -7,7 +7,8 @@ export interface Albom {
   year: number,
   artist: string,
   title: string,
-  id?: number
+  id?: number,
+  price: number
 }
 
 @Component({
@@ -23,84 +24,96 @@ export class CatalogComponent implements OnInit {
       alt: "album1",
       year: 1999,
       artist: "Lena Glass",
-      title: "Blue Moments"
+      title: "Blue Moments",
+      price: 3999
     },
     {href: "#album-2",
       img: "./assets/img/album2.jpg",
       alt: "album2",
       year: 1984,
       artist: "Peekaboo",
-      title: "Clear Nonsense"
+      title: "Clear Nonsense",
+      price: 3999
     },
     {href: "#album-3",
       img: "./assets/img/album3.jpg",
       alt: "album3",
       year: 1989,
       artist: "Bright",
-      title: "Gone Again"
+      title: "Gone Again",
+      price: 3999
     },
     {href: "#album-4",
       img: "./assets/img/album4.jpg",
       alt: "album4",
       year: 2006,
       artist: "Dynasty",
-      title: "Sacred"
+      title: "Sacred",
+      price: 3999
     },
     {href: "#album-5",
       img: "./assets/img/album5.jpg",
       alt: "album5",
       year: 1992,
       artist: "Digital Love",
-      title: "Follow the blink"
+      title: "Follow the blink",
+      price: 3999
     },
     {href: "#album-6",
       img: "./assets/img/album6.jpg",
       alt: "album6",
       year: 1987,
       artist: "The Matadoors",
-      title: "Oilspill"
+      title: "Oilspill",
+      price: 3999
     },
     {href: "#album-7",
       img: "./assets/img/album7.jpg",
       alt: "album7",
       year: 1992,
       artist: "Nostralus",
-      title: "Extreme Water"
+      title: "Extreme Water",
+      price: 3999
     },
     {href: "#album-8",
       img: "./assets/img/album8.jpg",
       alt: "album8",
       year: 1979,
       artist: "Fanfare",
-      title: "Isolde"
+      title: "Isolde",
+      price: 3999
     },
     {href: "#album-9",
       img: "./assets/img/album9.jpg",
       alt: "album9",
       year: 2005,
       artist: "Skyrunners",
-      title: "No problem, Housten"
+      title: "No problem, Housten",
+      price: 3999
     },
     {href: "#album-10",
       img: "./assets/img/album10.jpg",
       alt: "album10",
       year: 2010,
       artist: "Insane Children",
-      title: "Playground"
+      title: "Playground",
+      price: 3999
     },
     {href: "#album-11",
       img: "./assets/img/album11.jpg",
       alt: "album11",
       year: 1985,
       artist: "The Green Lords",
-      title: "Bacteria Invasion"
+      title: "Bacteria Invasion",
+      price: 3999
     },
     {href: "#album-12",
       img: "./assets/img/album12.jpg",
       alt: "album12",
       year: 1990,
       artist: "The Whistlespankers",
-      title: "Nigel &amp; Me"
+      title: "Nigel &amp; Me",
+      price: 3999
     }
   ];
 

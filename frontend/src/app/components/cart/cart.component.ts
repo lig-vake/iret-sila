@@ -14,7 +14,8 @@ export class CartComponent implements OnInit {
       year: 1999,
       artist: "Lena Glass",
       title: "Blue Moments",
-      id: 1
+      id: 1,
+      price: 3999
     },
     {href: "#album-2",
       img: "./assets/img/album2.jpg",
@@ -22,7 +23,8 @@ export class CartComponent implements OnInit {
       year: 1984,
       artist: "Peekaboo",
       title: "Clear Nonsense",
-      id: 2
+      id: 2,
+      price: 1999
     },
     {href: "#album-3",
       img: "./assets/img/album3.jpg",
@@ -30,7 +32,8 @@ export class CartComponent implements OnInit {
       year: 1989,
       artist: "Bright",
       title: "Gone Again",
-      id: 3
+      id: 3,
+      price: 599
     }
   ]
   constructor() { }

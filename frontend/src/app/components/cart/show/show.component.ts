@@ -8,9 +8,8 @@ import {Albom} from "../../catalog/catalog.component";
 })
 export class ShowComponent implements OnInit, OnDestroy {
 
-  priceOne: number = 3999
-  count: number = 0
-  price: number = this.priceOne * this.count
+  count: number = 1
+  priceAll: number = 0
   @Input() albom: Albom
   @Output() onRemove = new EventEmitter<number>()
   deleteAlbom() {
@@ -18,16 +17,20 @@ export class ShowComponent implements OnInit, OnDestroy {
   }
   constructor() { }
 
+
   ngOnInit(): void {
+    this.priceAll = this.albom.price * this.count
   }
   increase() {
     this.count++
+    this.priceAll = this.albom.price * this.count
   }
   decrease(): number {
     if( (this.count - 1) < 0) return 0
     else
     {
       this.count = this.count - 1
+      this.priceAll = this.albom.price * this.count
       return 0
     }
   }
