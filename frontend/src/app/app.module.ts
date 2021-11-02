@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { TrackComponent } from './components/track/track.component';
+import {MatCardModule} from "@angular/material/card";
 
 
 @NgModule({
@@ -40,22 +41,23 @@ import { TrackComponent } from './components/track/track.component';
         ShowComponent,
         TrackComponent,
     ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    RouterModule.forRoot([
-      {path: '', component: HomePageComponent},
-      {path: 'songs-and-albums', component: SongsAndAlbumsComponent},
-      {path: 'playlist', component: CurrentPlaylistComponent},
-      {path: 'catalog', component: CatalogComponent},
-      {path: 'cart', component: CartComponent},
-      {path: 'albom', component: AlbomComponent},
-      {path: 'album-page', component: AlbumPageComponent},
-    ]),
-    BrowserAnimationsModule,
-    MatInputModule,
-    MatButtonModule,
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        RouterModule.forRoot([
+            {path: '', component: HomePageComponent},
+            {path: 'songs-and-albums', component: SongsAndAlbumsComponent},
+            {path: 'playlist', component: CurrentPlaylistComponent},
+            {path: 'catalog', component: CatalogComponent},
+            {path: 'cart', component: CartComponent},
+            {path: 'albom', component: AlbomComponent},
+            {path: 'album-page', component: AlbumPageComponent},
+        ]),
+        BrowserAnimationsModule,
+        MatInputModule,
+        MatButtonModule,
+        MatCardModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

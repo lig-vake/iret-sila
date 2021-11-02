@@ -50,12 +50,18 @@
 </svg><!-- SVGs -->
 <main>
   <div class="view view--grid view--current">
-  <app-show></app-show>
-    <app-show></app-show>
-    <app-show></app-show>
-    <app-show></app-show>
+    <h2 style="margin-left: 200px" >Корзина</h2>
+    <p style="border: 1px solid #ccc;margin-inline: 200px;" >
+      <input type="checkbox" style="width: 20px; height: 20px;" name="all"/>
+      Выбрать все
+      <span style="float: right; padding-top: 5px">Удалить выбранные</span>
+    </p>
+    <app-show
+      *ngFor="let i of alboms"
+      [albom]="i"
+    ></app-show>
+  </div>
 
-  </div><!-- /view-grid -->
 
 </main>
 
