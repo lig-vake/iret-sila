@@ -6,7 +6,8 @@ export interface Albom {
   alt: string,
   year: number,
   artist: string,
-  title: string
+  title: string,
+  id?: number
 }
 
 @Component({

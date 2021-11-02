@@ -12,6 +12,10 @@ export class ShowComponent implements OnInit, OnDestroy {
   count: number = 0
   price: number = this.priceOne * this.count
   @Input() albom: Albom
+  @Output() onRemove = new EventEmitter<number>()
+  deleteAlbom() {
+    this.onRemove.emit(this.albom.id)
+  }
   constructor() { }
 
   ngOnInit(): void {

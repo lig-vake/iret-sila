@@ -59,6 +59,7 @@
     <app-show
       *ngFor="let i of alboms"
       [albom]="i"
+      (onRemove)="removeAlbom($event)"
     ></app-show>
   </div>
 

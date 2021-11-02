@@ -13,26 +13,31 @@ export class CartComponent implements OnInit {
       alt: "album1",
       year: 1999,
       artist: "Lena Glass",
-      title: "Blue Moments"
+      title: "Blue Moments",
+      id: 1
     },
     {href: "#album-2",
       img: "./assets/img/album2.jpg",
       alt: "album2",
       year: 1984,
       artist: "Peekaboo",
-      title: "Clear Nonsense"
+      title: "Clear Nonsense",
+      id: 2
     },
     {href: "#album-3",
       img: "./assets/img/album3.jpg",
       alt: "album3",
       year: 1989,
       artist: "Bright",
-      title: "Gone Again"
+      title: "Gone Again",
+      id: 3
     }
   ]
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  removeAlbom(id: number) {
+    this.alboms = this.alboms.filter(albom => albom.id !== id)
+  }
 }
