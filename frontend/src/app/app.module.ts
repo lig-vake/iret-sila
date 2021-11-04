@@ -26,6 +26,8 @@ import { PersonalInformationComponent } from './components/lk/personal-informati
 import { SettingsComponent } from './components/lk/settings/settings.component';
 import { PurchaseHistoryComponent } from './components/lk/purchase-history/purchase-history.component';
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
+import { FiltDirectionPipe } from './components/pipes/filt-direction.pipe';
+import {MatMenuModule} from "@angular/material/menu";
 
 
 @NgModule({
@@ -49,31 +51,33 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
         PersonalInformationComponent,
         SettingsComponent,
         PurchaseHistoryComponent,
+        FiltDirectionPipe,
     ],
     entryComponents: [
       SettingsComponent
     ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    RouterModule.forRoot([
-      {path: '', component: HomePageComponent},
-      {path: 'songs-and-albums', component: SongsAndAlbumsComponent},
-      {path: 'playlist', component: CurrentPlaylistComponent},
-      {path: 'catalog', component: CatalogComponent},
-      {path: 'cart', component: CartComponent},
-      {path: 'albom', component: AlbomComponent},
-      {path: 'album-page', component: AlbumPageComponent},
-      {path: 'lk', component: LkComponent},
-      {path: 'lk/settings', component: LkComponent},
-      {path: 'lk/purchase-history', component: LkComponent},
-    ]),
-    BrowserAnimationsModule,
-    MatInputModule,
-    MatButtonModule,
-    MatCardModule,
-    MatSlideToggleModule,
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        RouterModule.forRoot([
+            {path: '', component: HomePageComponent},
+            {path: 'songs-and-albums', component: SongsAndAlbumsComponent},
+            {path: 'playlist', component: CurrentPlaylistComponent},
+            {path: 'catalog', component: CatalogComponent},
+            {path: 'cart', component: CartComponent},
+            {path: 'albom', component: AlbomComponent},
+            {path: 'album-page', component: AlbumPageComponent},
+            {path: 'lk', component: LkComponent},
+            {path: 'lk/settings', component: LkComponent},
+            {path: 'lk/purchase-history', component: LkComponent},
+        ]),
+        BrowserAnimationsModule,
+        MatInputModule,
+        MatButtonModule,
+        MatCardModule,
+        MatSlideToggleModule,
+        MatMenuModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

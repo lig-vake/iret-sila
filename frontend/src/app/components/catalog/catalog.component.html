@@ -8,12 +8,27 @@
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <meta name="author" content="Codrops" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap">
-
 </head>
 <body>
 <app-header></app-header>
-<input type="text" style="margin-top: 30px;"  [(ngModel)]="search"  >
+<p>
+  <input type="text" style=" width: 880px;margin-left: 60px;"  [(ngModel)]="search">
+  <input mat-button [matMenuTriggerFor]="setting" style="width: 35px; border: none;background: none;" type="image" src="./assets/img/settings.png">
+  <mat-menu #setting>
+    <button mat-menu-item [matMenuTriggerFor]="directions" >Directions</button>
+  </mat-menu>
+  <mat-menu #directions>
+    <button (click) ="directionSearch = all"  mat-menu-item>Все</button>
+    <button (click) ="directionSearch = rok"  mat-menu-item>Рок</button>
+    <button (click) ="directionSearch = pop"  mat-menu-item>Поп</button>
+    <button (click) ="directionSearch = hip"  mat-menu-item>Хип-Хоп</button>
+    <button (click) ="directionSearch = bluz"  mat-menu-item>Блюз</button>
+    <button (click) ="directionSearch = jaz"  mat-menu-item>Джаз</button>
+  </mat-menu>
+</p>
+<mat-menu></mat-menu>
 <svg class="hidden">
   <!-- made with Icomoon.io, Icons from http://www.entypo.com/ and https://icomoon.io/ -->
   <defs>
@@ -53,14 +68,14 @@
 <main>
   <div class="view view--grid view--current">
 
-    <ul #catalog class="grid" *ngFor="let i of alboms | filter:search" style="display:inline;">
+    <ul #catalog class="grid" *ngFor="let i of alboms | filter:search | filtDirection: directionSearch" style="display:inline;">
       <li class="grid__item">
         <a class="grid__link" href={{i.href}} data-playlist-1="audio/songStolen_Dreams_Backing_Track.mp3,audio/songDream_On_This_Side.mp3" data-playlist-2="audio/songStolen_Dreams_Backing_Track.mp3">
           <div class="img-wrap img-wrap--grid">
             <svg class="lp lp--grid">
               <use xlink:href="#icon-lp-mini"></use>
             </svg>
-            <img  class="img img--grid" src={{i.img}} alt={{i.alt}} />
+            <img class="img img--grid" src={{i.img}} alt={{i.alt}} />
           </div>
           <span class="year">{{i.year}}</span>
           <h2 class="artist">{{i.artist}}</h2>
@@ -81,215 +96,4 @@
 -->
 </body>
 </html>
-
-<style>
-
-  @font-face {
-    font-family: 'nexa_boldregular';
-    font-weight: bold;
-    font-style: normal;
-    src: url('../fonts/nexa_boldfree_macroman/Nexa_Free_Bold-webfont.eot');
-    src: url('../fonts/nexa_boldfree_macroman/Nexa_Free_Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/nexa_boldfree_macroman/Nexa_Free_Bold-webfont.woff2') format('woff2'), url('../fonts/nexa_boldfree_macroman/Nexa_Free_Bold-webfont.woff') format('woff'), url('../fonts/nexa_boldfree_macroman/Nexa_Free_Bold-webfont.ttf') format('truetype'), url('../fonts/nexa_boldfree_macroman/Nexa_Free_Bold-webfont.svg#nexa_boldregular') format('svg');
-  }
-
-  *,
-  *::after,
-  *::before {
-    box-sizing: border-box;
-  }
-
-  .hidden {
-    position: absolute;
-    overflow: hidden;
-    width: 0;
-    height: 0;
-    pointer-events: none;
-  }
-
-  body {
-    font-family: 'Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace;
-    overflow-x: hidden;
-    color: #474283;
-    background: #45cb96;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  a {
-    text-decoration: none;
-    color: #fff;
-    outline: none;
-  }
-
-  a:hover,
-  a:focus {
-    color: #349770;
-  }
-
-  /* grid */
-
-  .grid {
-    position: relative;
-    min-height: 100vh;
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-  }
-
-  @-webkit-keyframes spinLoader {
-    to {
-      -webkit-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes spinLoader {
-    to {
-      -webkit-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
-  }
-
-  .page-header,
-  .grid {
-    max-width: 1200px;
-  }
-
-  .grid__item {
-    position: relative;
-    width: 50%;
-    min-width: 280px;
-    margin: 0 0 2em;
-    padding: 1em 4em 0;
-  }
-
-  .no-js .grid__item {
-    display: inline-block;
-    width: calc(33.33% - 0.4em);
-    margin: 2em 0;
-  }
-
-  @media screen and (min-width: 52.5em) {
-    .grid__item {
-      width: 33.33%;
-      margin: 0 0 9em;
-    }
-  }
-
-  @media screen and (max-width: 36em) {
-    .grid__item {
-      width: 100%;
-      margin: 2em 0;
-      padding: 1em 2em 0;
-    }
-  }
-
-  /* grid decoration */
-
-  .grid__item--deco::before {
-    font-family: 'nexa_boldregular', sans-serif;
-    font-size: 15em;
-    position: absolute;
-    z-index: -1;
-    top: -1em;
-    left: -0.15em;
-    opacity: 0.1;
-  }
-
-  .grid__item--deco-1::before {
-    content: '1985';
-  }
-
-  .grid__item--deco-2::before {
-    content: '1974';
-  }
-
-  .grid__item--deco-3::before {
-    content: '2015';
-  }
-
-  /* grid link */
-
-  .grid__link {
-    position: relative;
-    display: block;
-    color: #474283;
-    -webkit-perspective: 1200px;
-    perspective: 1200px;
-  }
-
-  .grid__link:hover {
-    color: #474283;
-    outline: none;
-  }
-
-  /* image wrap and deco lp */
-
-  .img-wrap {
-    position: relative;
-  }
-
-  .lp {
-    position: absolute;
-  }
-
-  .lp--grid {
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: translate3d(10%, 0, 0);
-    transform: translate3d(10%, 0, 0);
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: -webkit-transform 0.3s;
-    transition: transform 0.3s;
-    transition: transform 0.3s, -webkit-transform 0.3s;
-  }
-
-  .grid__link:hover .lp {
-    -webkit-transform: translate3d(20%, 0, 0);
-    transform: translate3d(20%, 0, 0);
-  }
-
-  .img {
-    display: block;
-  }
-
-  .img--grid {
-    position: relative;
-    max-width: 100%;
-    box-shadow: 2px 16px 26px 0px rgba(36, 33, 69, 0.3);
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-  }
-
-  .artist {
-    font-size: 0.85em;
-    font-weight: normal;
-    margin: 1em 0 0.5em;
-  }
-
-  .title {
-    font-size: 1em;
-    font-weight: bold;
-    margin: 0 0 0 3em;
-    white-space: nowrap;
-  }
-
-  .year {
-    font-size: 0.85em;
-    position: absolute;
-    z-index: 10;
-    right: 0;
-    margin: -1em -1em 0 0;
-    padding: 0.3em 0.5em;
-    color: #fff;
-    border: 2px solid;
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-  }
-
-  .year--contrast {
-    color: inherit;
-  }
-</style>
 
