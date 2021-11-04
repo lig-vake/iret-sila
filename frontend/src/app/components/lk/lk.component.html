@@ -1,0 +1,23 @@
+<app-header></app-header>
+<main>
+  <h2 class="label-centered">Личный кабинет</h2>
+  <section>
+    <div class="nav-wrapper">
+      <nav>
+        <a class="nav-item" [ngClass]="{'selected' : curComponent == 'lk'}" routerLink="/lk">Личная информация</a>
+        <a class="nav-item" [ngClass]="{'selected' : curComponent == 'settings'}" routerLink="/lk/settings">Настройки</a>
+        <a class="nav-item" [ngClass]="{'selected' : curComponent == 'purchase-history'}" routerLink="/lk/purchase-history">История покупок</a>
+<!--        <div class="horizontal-line"></div>-->
+      </nav>
+      <nav>
+        <a class="nav-item button">Выйти из аккаунта</a>
+      </nav>
+    </div>
+    <div class="vertical-line"></div>
+    <div class="window">
+      <app-personal-information *ngIf="curComponent == 'lk'"></app-personal-information>
+      <app-settings *ngIf="curComponent == 'settings'"></app-settings>
+      <app-purchase-history *ngIf="curComponent == 'purchase-history'"></app-purchase-history>
+    </div>
+  </section>
+</main>

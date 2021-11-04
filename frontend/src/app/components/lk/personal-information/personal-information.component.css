@@ -1,0 +1,11 @@
+section {
+  width: 100%;
+}
+.label {
+  font-size: x-large;
+  margin-bottom: 30px;
+}
+.information {
+  margin: 20px 0;
+  font-size: larger;
+}
