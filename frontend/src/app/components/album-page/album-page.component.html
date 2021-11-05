@@ -1,49 +1,49 @@
 <app-header></app-header>
 
-<body>
+<main>
+
+	<div class="tracks-wrapper">
+
+    <div style="text-align: center;">
+      <h1 style="font-family: 'Marck Script', cursive; color: rgb(90, 0, 175);">Имя автора / Название альбома</h1>
+    </div>
   
-<div id="wrap">
-     <!-- Левая часть страницы -->
-    <div id="left_col">
+    <!-- Раскрывающееся поле с картинками автора -->
 
-        <div style="text-align: center;">
-            <h1 style="font-family: 'Marck Script', cursive; color: rgb(90, 0, 175);">Имя автора / Название альбома</h1>
-        </div>
-        
-        <!-- Раскрывающееся поле с картинками автора -->
-        <button (click)="getPhotos()">Фотографии альбома</button>
-        <button (click)="getInfo()">Информация об авторе</button> 
+    <button (click)="getPhotos()">Фотографии альбома</button>
+    <button (click)="getInfo()">Информация об авторе</button> 
 
-        <div *ngIf="toggleInfo">
-          <p> 
-            Здесь можно будет увидеть информацию об авторе, если нам будет не лень её добавлять 
-          </p>
-        </div>  
+    <div *ngIf="toggleInfo">
+      <p style="margin-top: 0;"> 
+       Здесь можно будет увидеть информацию об авторе, если нам будет не лень её добавлять 
+      </p>
+    </div>  
 
-        <div *ngIf="togglePhotos">
-          <p class="imgGrid">
-            <img class="images" src="https://i1.sndcdn.com/artworks-Ofv3CFYpmMowA9G7-5cRY7w-t500x500.jpg">
-            <img class="images" src="https://i1.sndcdn.com/artworks-000232634900-nf5ukl-t500x500.jpg">
-            <img class="images" src="https://pesni.life/pic/20/85/208566.400x400.jpg">
-            <img class="images" src="https://s.mxmcdn.net/images-storage/albums4/4/4/0/3/4/7/46743044_800_800.jpg">
-          </p>
-        </div>      
+    <div *ngIf="togglePhotos">
+      <p class="imgGrid">
+        <img class="images" src="https://i1.sndcdn.com/artworks-Ofv3CFYpmMowA9G7-5cRY7w-t500x500.jpg">
+        <img class="images" src="https://i1.sndcdn.com/artworks-000232634900-nf5ukl-t500x500.jpg">
+        <img class="images" src="https://pesni.life/pic/20/85/208566.400x400.jpg">
+        <img class="images" src="https://s.mxmcdn.net/images-storage/albums4/4/4/0/3/4/7/46743044_800_800.jpg">
+      </p>
+    </div>      
 
-         <!-- Список треков альбома -->
+   <!-- Список треков альбома -->
 
-        <div class="track-container">
-          <a class="track"
-          (click)="changeAudio('./assets/bach.mp3')">
-         <img class="play-img" src="./assets/svg/play-button.svg">
-         <img class="track-img" src="https://i1.sndcdn.com/artworks-Ofv3CFYpmMowA9G7-5cRY7w-t500x500.jpg">
-         <strong class="track-text">
-           <div class="track-name">prelude and fuge c-moll</div>
-           <div> – </div>
-           <div class="track-author">j.s. bach / richter</div>
-         </strong>
-       </a>
+    <div class="track-container">
+
       <a class="track"
-         (click)="changeAudio('//dl.muzonovs.ru/files/music/2020/07/1-2-3-4-5-6-7-8-m-s-in-my-bank-account-21-savage-tik-tok.mp3')">
+        (click)="changeAudio('./assets/bach.mp3')">
+      <img class="play-img" src="./assets/svg/play-button.svg">
+      <img class="track-img" src="https://i1.sndcdn.com/artworks-Ofv3CFYpmMowA9G7-5cRY7w-t500x500.jpg">
+      <strong class="track-text">
+        <div class="track-name">prelude and fuge c-moll</div>
+        <div> – </div>
+        <div class="track-author">j.s. bach / richter</div>
+      </strong>
+      </a>
+      <a class="track"
+        (click)="changeAudio('//dl.muzonovs.ru/files/music/2020/07/1-2-3-4-5-6-7-8-m-s-in-my-bank-account-21-savage-tik-tok.mp3')">
         <img class="play-img" src="./assets/svg/play-button.svg">
         <img class="track-img" src="https://i1.sndcdn.com/artworks-000232634900-nf5ukl-t500x500.jpg">
         <strong class="track-text">
@@ -53,7 +53,7 @@
         </strong>
       </a>
       <a class="track"
-         (click)="changeAudio('https://pesni.life/files/10981333c07f4/Vowl-her.mp3')">
+        (click)="changeAudio('https://pesni.life/files/10981333c07f4/Vowl-her.mp3')">
         <img class="play-img" src="./assets/svg/play-button.svg">
         <img class="track-img" src="https://pesni.life/pic/20/85/208566.400x400.jpg">
         <strong class="track-text">
@@ -63,7 +63,7 @@
         </strong>
       </a>
       <a class="track"
-         (click)="changeAudio('https://cdn.muzladaz.ru/uploads/files/2020-06/1592567746_iann-dior-gone-girl.mp3')">
+        (click)="changeAudio('https://cdn.muzladaz.ru/uploads/files/2020-06/1592567746_iann-dior-gone-girl.mp3')">
         <img class="play-img" src="./assets/svg/play-button.svg">
         <img class="track-img" src="https://s.mxmcdn.net/images-storage/albums4/4/4/0/3/4/7/46743044_800_800.jpg">
         <strong class="track-text">
@@ -74,20 +74,22 @@
       </a>
       <a class="track"
           (click)="changeAudio('./assets/bach.mp3')">
-         <img class="play-img" src="./assets/svg/play-button.svg">
-         <img class="track-img" src="https://i1.sndcdn.com/artworks-Ofv3CFYpmMowA9G7-5cRY7w-t500x500.jpg">
-         <strong class="track-text">
-           <div class="track-name">prelude and fuge c-moll</div>
-           <div> – </div>
-           <div class="track-author">j.s. bach / richter</div>
-         </strong>
-       </a>
-        </div>
-    </div>
-     
-    <!-- Плеер - правая сторона страницы -->
-    
-    <app-record-player id="right_col" [src]="audioSrc"></app-record-player>
-</div>
+        <img class="play-img" src="./assets/svg/play-button.svg">
+        <img class="track-img" src="https://i1.sndcdn.com/artworks-Ofv3CFYpmMowA9G7-5cRY7w-t500x500.jpg">
+        <strong class="track-text">
+          <div class="track-name">prelude and fuge c-moll</div>
+          <div> – </div>
+          <div class="track-author">j.s. bach / richter</div>
+        </strong>
+      </a>
 
-</body>
+    </div>
+
+	</div>
+			  
+	<div id="player-wrapper">
+    <button class="cart-button">Добавить альбом в корзину</button>
+		<app-record-player class="player" [src]=audioSrc></app-record-player>
+	</div>  
+	 
+</main>

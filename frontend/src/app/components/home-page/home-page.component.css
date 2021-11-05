@@ -1,23 +1,5 @@
 /*Стили разметки страницы*/
-#wrap {
-  width:100%;
-  margin:0 auto;
-  
-}
-#left_col {
-  float:left;
-  width: 620px;;
-  margin: 10px 2%;
-}
-#right_col {
-  position: fixed;
-  top: 45px;
-  right: 0px;
-  left: 671px;
-  bottom: auto;
-  width: 671px;
-}
-body {
+main {
 	font-family: 'Marck Script', cursive;
 	overflow-x: hidden;
 	/*color: #474283;*/
@@ -27,17 +9,44 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.albums-wrapper {
+	width: 55%;
+	/*padding: 0 0;*/
+	margin-left: 3%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#player-wrapper {
+	width: 50%;
+}
+
+.player {
+	transform: scale(0.85);
+	transform-origin: bottom right;
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	top: 5%;
+	right: 3%;
+	bottom: auto;
+	width: 671px;
+  }
+
 /* Стили для строки поиска */
 
 * {box-sizing: border-box;}
 form {
   position: relative;
-  width: 500px;
-  margin: 25px 70px;
+  width: 78%;
+  margin-right: 14%;
+  
 }
 input {
+  font-size: 16px;
   width: 100%;
-  height: 42px;
+  height: 47px;
   padding-left: 10px;
   border: 4px solid #7BA7AB;
   border-radius: 5px;
@@ -50,7 +59,7 @@ input {
   top: 0;
   right: 61px;
   width: 60px;
-  height: 42px;
+  height: 47px;
   border: none;
   background: #7BA7AB;
   border-radius: 0 5px 5px 0;
@@ -59,15 +68,16 @@ input {
 .search:before {
   content: "\f002";
   font-family: FontAwesome;
-  font-size: 16px;
+  font-size: 20px;
   color: #F9F0DA;
 }
+/*
 .options {
 	position: absolute; 
 	top: 0;
 	right: 0px;
 	width: 60px;
-	height: 42px;
+	height: 47px;
 	border: none;
 	background: #7BA7AB;
 	border-radius: 0 5px 5px 0;
@@ -76,9 +86,10 @@ input {
 .options:before {
 	content: "\f036";
 	font-family: FontAwesome;
-	font-size: 16px;
+	font-size: 20px;
 	color: #F9F0DA;
   }
+*/
 
 /* Конец стилей для строки поиска */
 
@@ -86,25 +97,24 @@ input {
 
 /*@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');*/
 
-h1.main, p.demos {
+p.demos {
 	-webkit-animation-delay: 18s;
 	-moz-animation-delay: 18s;
 	-ms-animation-delay: 18s;
 	animation-delay: 18s;
 }
 .sp-container {
+	line-height: 0;
   align-items: center;
-  padding: 0 15px;
+  /*padding: 0 15px;*/
 }
-.sp-content {
-  align-items: center;
-  padding: 0 15px;
-}
+
 .frame {  
   align-items: center;
   /*padding: 0 15px;*/
   font-family: 'Marck Script', cursive;
-	font-size: 40px;
+  font-weight: bold;
+	font-size: 50px;
 	/*width: 100%;*/
 	text-align: center;
 	color: transparent;
@@ -358,16 +368,16 @@ a:focus {
 }*/
 
 /* grid */
-/*
+
 .grid {
 	width: 100%;
 	position: relative;
 	min-height: 100vh;
-	margin: 0 0;
-	padding: 0;
+	margin: 3% 0%;
+	padding: 0% 0%;
 	list-style: none;
 }
-*/
+
 @-webkit-keyframes spinLoader {
 	to {
 		-webkit-transform: rotate(360deg);
@@ -388,17 +398,18 @@ a:focus {
 }
 
 .grid__item {
+	display: inline-block;
 	position: relative;
-	width: 100%;
-	min-width: 280px;
-	/*margin: 0 0 0;*/
-	padding: 0em 2em 0;
+	width: 35%;
+	margin: 0% 4% 2%;
+	padding: 0% 0% 0%;
 }
 
+/*
 .no-js .grid__item {
 	display: inline-block;
 	width: calc(33.33% - 0.4em);
-	margin: 1em 0;
+	margin: 2em 0;
 }
 
 @media screen and (min-width: 52.5em) {
@@ -415,6 +426,7 @@ a:focus {
 		padding: 1em 2em 0;
 	}
 }
+*/
 
 /* grid decoration */
 /*
@@ -426,7 +438,6 @@ a:focus {
 	top: -1em;
 	left: -0.15em;
 	opacity: 0.1;
-	
 }
 
 .grid__item--deco-1::before {

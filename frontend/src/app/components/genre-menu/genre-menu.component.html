@@ -1,0 +1,97 @@
+<button class="options" [matMenuTriggerFor]="genres"></button>
+<mat-menu #genres="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="classic">Классика</button>
+  <button mat-menu-item [matMenuTriggerFor]="jazz">Джаз</button>
+  <button mat-menu-item [matMenuTriggerFor]="blues">Блюз</button>
+  <button mat-menu-item [matMenuTriggerFor]="disco">Ретро</button>
+  <button mat-menu-item [matMenuTriggerFor]="pop">Поп</button>
+  <button mat-menu-item [matMenuTriggerFor]="rock">Рок</button>
+  <button mat-menu-item [matMenuTriggerFor]="hiphop">Хип-Хоп</button>
+  <button mat-menu-item [matMenuTriggerFor]="rap">Русский рэп, будь он неладен</button>
+  <button mat-menu-item [matMenuTriggerFor]="folk">Народные</button>
+  <button mat-menu-item [matMenuTriggerFor]="bards">Авторская песня</button>
+  <button mat-menu-item [matMenuTriggerFor]="rusChanson">Российский шансон</button>
+  <button mat-menu-item [matMenuTriggerFor]="chanson">Французский шансон</button>
+</mat-menu>
+
+<mat-menu #classic="matMenu">
+  <button mat-menu-item>Все</button>
+  <button mat-menu-item>Бах</button>
+  <button mat-menu-item>Гендель</button>
+  <button mat-menu-item>Моцарт</button>
+  <button mat-menu-item>Бетховен</button>
+  <button mat-menu-item>Чайкофский</button>
+</mat-menu>
+
+<mat-menu #jazz="matMenu">
+  <button mat-menu-item>Все</button>
+  <button mat-menu-item>Луи Армстронг</button>
+  <button mat-menu-item>Элла Фицджеральд</button>
+  <button mat-menu-item>Оскар Питерсон</button>
+</mat-menu>
+
+<mat-menu #blues="matMenu">
+  <button mat-menu-item>Все</button>
+  <button mat-menu-item>Some author 1</button>
+  <button mat-menu-item>Some author 2</button>
+</mat-menu>
+
+<mat-menu #disco="matMenu">
+  <button mat-menu-item>Все</button>
+  <button mat-menu-item>Тото Кутуньо</button>
+  <button mat-menu-item>Рикки э Повери</button>
+  <button mat-menu-item>Адриано Челентано</button>
+  <button mat-menu-item>Рикардо Фольи</button>  
+  <button mat-menu-item>Аль Бано и Ромина Пауэр</button>
+</mat-menu>
+
+<mat-menu #pop="matMenu">
+  <button mat-menu-item>Все</button>
+  <button mat-menu-item>Сергей Лазарев</button>
+  <button mat-menu-item>Дима Билан</button>
+  <button mat-menu-item>Егор Крид</button>
+</mat-menu>
+
+<mat-menu #rock="matMenu">
+  <button mat-menu-item>Все</button>
+  <button mat-menu-item>Рамштайн</button>
+  <button mat-menu-item>Токио Хотел</button>
+</mat-menu>
+
+<mat-menu #hiphop="matMenu">
+  <button mat-menu-item>Все</button>
+  <button mat-menu-item>50 cent</button>
+  <button mat-menu-item>Эминем</button>
+</mat-menu>
+
+<mat-menu #folk="matMenu">
+  <button mat-menu-item>Все</button>
+  <button mat-menu-item>Some author 1</button>
+  <button mat-menu-item>Some author 2</button>
+</mat-menu>
+
+<mat-menu #bards="matMenu">
+  <button mat-menu-item>Все</button>
+  <button mat-menu-item>Владимир Высоцкий</button>
+  <button mat-menu-item>Some author 2</button>
+</mat-menu>
+
+<mat-menu #rap="matMenu">
+  <button mat-menu-item>Все</button>
+  <button mat-menu-item>Вася Вакуленко</button>
+  <button mat-menu-item>Витя Калашников</button>
+  <button mat-menu-item>Гуф</button>
+</mat-menu>
+
+<mat-menu #rusChanson="matMenu">
+  <button mat-menu-item>Все</button>
+  <button mat-menu-item>Блатной Удар</button>
+  <button mat-menu-item>Михаил Круг</button>
+</mat-menu>
+
+<mat-menu #chanson="matMenu">
+  <button mat-menu-item>Все</button>
+  <button mat-menu-item>Эдит Пиаф</button>
+  <button mat-menu-item>Шарль Азнавур</button>
+  <button mat-menu-item>Мирей Матье</button>
+</mat-menu>

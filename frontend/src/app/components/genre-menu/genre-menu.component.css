@@ -1,0 +1,17 @@
+.options {
+	position: absolute; 
+	top: 0;
+	right: 0px;
+	width: 60px;
+	height: 47px;
+	border: none;
+	background: #7BA7AB;
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+  }
+.options:before {
+	content: "\f036";
+	font-family: FontAwesome;
+	font-size: 20px;
+	color: #F9F0DA;
+  }

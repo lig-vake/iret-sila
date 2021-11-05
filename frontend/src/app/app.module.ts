@@ -28,6 +28,7 @@ import { PurchaseHistoryComponent } from './components/lk/purchase-history/purch
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { FiltDirectionPipe } from './components/pipes/filt-direction.pipe';
 import {MatMenuModule} from "@angular/material/menu";
+import { GenreMenuComponent } from './components/genre-menu/genre-menu.component';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import {MatMenuModule} from "@angular/material/menu";
         SettingsComponent,
         PurchaseHistoryComponent,
         FiltDirectionPipe,
+        GenreMenuComponent,
     ],
     entryComponents: [
       SettingsComponent
