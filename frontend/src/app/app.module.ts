@@ -14,7 +14,7 @@ import { CurrentPlaylistComponent } from './components/current-playlist/current-
 import { AlbumPageComponent } from './components/album-page/album-page.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { FilterPipe } from './components/pipes/filter.pipe';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ShowComponent } from './components/cart/show/show.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
@@ -85,6 +85,7 @@ import { AboutComponent } from './components/about/about.component';
         MatCardModule,
         MatSlideToggleModule,
         MatMenuModule,
+        ReactiveFormsModule,
     ],
   providers: [],
   bootstrap: [AppComponent]

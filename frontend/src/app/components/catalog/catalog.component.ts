@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {FormControl, FormGroup} from '@angular/forms'
 export interface Albom {
   href: string,
   img: string,
@@ -26,6 +26,7 @@ export enum Directions {
   styleUrls: ['./catalog.component.css']
 })
 export class CatalogComponent implements OnInit {
+  form: FormGroup
   all: Directions = Directions.All
   rok: Directions = Directions.Rock
   hip: Directions = Directions.Hip
@@ -160,11 +161,17 @@ export class CatalogComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-
+  ngOnInit() {
+    this.form = new FormGroup({
+      inp: new FormControl('')
+    })
   }
 
-
+  submit() {
+    console.log('Form suki', this.form)
+    this.search = this.form.value.inp
+    console.log('search suki is', this.search)
+  }
 }
 
 //interface Albom {

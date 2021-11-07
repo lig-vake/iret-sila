@@ -13,22 +13,15 @@
 </head>
 <body>
 <app-header></app-header>
-<p>
-  <input type="text" style=" width: 880px;margin-left: 60px;"  [(ngModel)]="search">
-  <input mat-button [matMenuTriggerFor]="setting" style="width: 35px; border: none;background: none;" type="image" src="./assets/img/settings.png">
-  <mat-menu #setting>
-    <button mat-menu-item [matMenuTriggerFor]="directions" >Directions</button>
-  </mat-menu>
-  <mat-menu #directions>
-    <button (click) ="directionSearch = all"  mat-menu-item>Все</button>
-    <button (click) ="directionSearch = rok"  mat-menu-item>Рок</button>
-    <button (click) ="directionSearch = pop"  mat-menu-item>Поп</button>
-    <button (click) ="directionSearch = hip"  mat-menu-item>Хип-Хоп</button>
-    <button (click) ="directionSearch = bluz"  mat-menu-item>Блюз</button>
-    <button (click) ="directionSearch = jaz"  mat-menu-item>Джаз</button>
-  </mat-menu>
-</p>
-<mat-menu></mat-menu>
+<main>
+  <h1 style="text-align: center; font-size: 60px; line-height: 5%">Каталог</h1>
+  <hr>
+    <form style="width: 770px;" [formGroup]="form" (ngSubmit)="submit()" >
+      <input type="text" formControlName="inp" />
+      <button class="search" type="submit"></button>
+      <app-genre-menu></app-genre-menu>
+    </form>
+  <mat-menu></mat-menu>
 <svg class="hidden">
   <!-- made with Icomoon.io, Icons from http://www.entypo.com/ and https://icomoon.io/ -->
   <defs>
@@ -65,11 +58,11 @@
     </symbol>
   </defs>
 </svg><!-- SVGs -->
-<main>
+
   <div class="view view--grid view--current">
 
     <ul #catalog class="grid" *ngFor="let i of alboms | filter:search | filtDirection: directionSearch" style="display:inline;">
-      <li class="grid__item">
+      <li style="transform: scale(0.9);" class="grid__item">
         <a class="grid__link" href={{i.href}} data-playlist-1="audio/songStolen_Dreams_Backing_Track.mp3,audio/songDream_On_This_Side.mp3" data-playlist-2="audio/songStolen_Dreams_Backing_Track.mp3">
           <div class="img-wrap img-wrap--grid">
             <svg class="lp lp--grid">
