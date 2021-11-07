@@ -1,5 +1,4 @@
-import {Byte} from '@angular/compiler/src/util';
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 export interface Albom {
   href: string,
@@ -12,41 +11,49 @@ export interface Albom {
   price: number
 }
 
+export interface Track {
+  img: string,  
+  name: string,
+  author: string  
+}
+
 @Component({
-  selector: 'app-home-page',
-  templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css']
+  selector: 'app-author-page',
+  templateUrl: './author-page.component.html',
+  styleUrls: ['./author-page.component.css']
 })
-export class HomePageComponent implements OnInit {
+export class AuthorPageComponent implements OnInit {
 
-  count: Byte;
-  greeting: string;
-  audioSrc: string = '';
+  toggleAlbums: boolean;
+  toggleSingles: boolean;
+  toggleInfo: boolean = true;
 
-  ngOnInit(): void {
-    this.greeting = 'Здравствуйте!';
-    this.count = 1;
-
-    setTimeout(() => {
-      this.greeting = 'Добро пожаловать на сайт команды ИРЭТ - сила!';
-      this.count = 2;
-    }, 3000);
-
-    setTimeout(() => {
-      this.greeting = 'Включите проигрыатель или откройте один из альбомов!';
-      this.count = 3;
-    }, 6000);
-
-    setTimeout(() => {
-      this.greeting = 'Воспользуйтесь фильтрами поиска!';
-      this.count = 4;
-    }, 9000);
-
-    setTimeout(() => {
-      this.greeting = 'Made by ИРЭТ - сила, 2021';
-      this.count = 5;
-    }, 12000);
+  getAlbums() {
+    this.toggleAlbums = !this.toggleAlbums;
+    this.toggleInfo = !this.toggleInfo;
   }
+  getSingles() {
+    this.toggleSingles = !this.toggleSingles;
+    this.toggleInfo = !this.toggleInfo;
+  }
+
+  constructor() { }
+
+  ngOnInit(): void {}
+
+  tracks: Track[] =[
+    {img: "https://i1.sndcdn.com/artworks-Ofv3CFYpmMowA9G7-5cRY7w-t500x500.jpg",  
+      name: "prelude and fuge c-moll",
+      author: "j.s. bach / richter"},
+
+    {img: "https://i1.sndcdn.com/artworks-000232634900-nf5ukl-t500x500.jpg",  
+      name: "Bank Account",
+      author: "21 Savage"},
+    
+    {img: "https://pesni.life/pic/20/85/208566.400x400.jpg",  
+      name: "her",
+      author: "Vowl."}
+  ]
 
   alboms:Albom[] = [
     {href: "album-page",

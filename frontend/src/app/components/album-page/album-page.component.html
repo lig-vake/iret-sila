@@ -10,8 +10,11 @@
   
     <!-- Раскрывающееся поле с картинками автора -->
 
-    <button (click)="getPhotos()">Фотографии альбома</button>
-    <button (click)="getInfo()">Информация об авторе</button> 
+    <button onclick="document.location='/author-page'">
+      Перейти на страницу автора
+    </button>
+    <button style="width: 46%; display: inline-flex;" (click)="getPhotos()">Фотографии альбома</button> 
+    <button style="width: 46%; display: inline-flex; margin-left: 3%;" (click)="getInfo()">Информация об авторе</button>
 
     <div *ngIf="toggleInfo">
       <p style="margin-top: 0;"> 
@@ -72,23 +75,15 @@
           <div class="track-author">iann dior</div>
         </strong>
       </a>
-      <a class="track"
-          (click)="changeAudio('./assets/bach.mp3')">
-        <img class="play-img" src="./assets/svg/play-button.svg">
-        <img class="track-img" src="https://i1.sndcdn.com/artworks-Ofv3CFYpmMowA9G7-5cRY7w-t500x500.jpg">
-        <strong class="track-text">
-          <div class="track-name">prelude and fuge c-moll</div>
-          <div> – </div>
-          <div class="track-author">j.s. bach / richter</div>
-        </strong>
-      </a>
 
     </div>
 
 	</div>
 			  
 	<div id="player-wrapper">
-    <button class="cart-button">Добавить альбом в корзину</button>
+    <button class="cart-button" onclick="document.location='/cart'">
+      Добавить альбом в корзину
+    </button>
 		<app-record-player class="player" [src]=audioSrc></app-record-player>
 	</div>  
 	 

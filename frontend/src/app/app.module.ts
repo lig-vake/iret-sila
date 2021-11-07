@@ -29,6 +29,8 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { FiltDirectionPipe } from './components/pipes/filt-direction.pipe';
 import {MatMenuModule} from "@angular/material/menu";
 import { GenreMenuComponent } from './components/genre-menu/genre-menu.component';
+import { AuthorPageComponent } from './components/author-page/author-page.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 @NgModule({
@@ -54,6 +56,8 @@ import { GenreMenuComponent } from './components/genre-menu/genre-menu.component
         PurchaseHistoryComponent,
         FiltDirectionPipe,
         GenreMenuComponent,
+        AuthorPageComponent,
+        AboutComponent,
     ],
     entryComponents: [
       SettingsComponent
@@ -72,6 +76,8 @@ import { GenreMenuComponent } from './components/genre-menu/genre-menu.component
             {path: 'lk', component: LkComponent},
             {path: 'lk/settings', component: LkComponent},
             {path: 'lk/purchase-history', component: LkComponent},
+            {path: 'author-page', component: AuthorPageComponent},
+            {path: 'about', component: AboutComponent}
         ]),
         BrowserAnimationsModule,
         MatInputModule,

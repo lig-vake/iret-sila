@@ -1,0 +1,81 @@
+/*
+main {
+	font-family: 'Marck Script', cursive;
+	height: 90.5%;
+	color: #474283;
+	background: #45cb96;
+	background-color:#6ccaa5;
+}
+
+p {
+    
+  }
+*/
+
+  /* Стили для рамки */
+
+body {
+    background: #6ccaa5; 
+    height: 90.5%; 
+    overflow-x: hidden;
+}
+
+.frame-outer {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    border: 8px solid rgb(197, 139, 251);
+    padding: 10px;
+  }
+  .frame-inner {
+    text-align: center;
+    position: relative;
+    border: 8px solid rgb(212, 184, 238);
+    padding: 0% 2%;
+   }
+  .frame-outer:before, 
+  .frame-outer:after, 
+  .frame-inner:before, 
+  .frame-inner:after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #6ccaa5;
+    background-image: linear-gradient(90deg, rgb(123, 255, 0) 33%, rgba(255,255,255,0) 33%, rgba(255,255,255,0) 66%, rgb(136, 255, 0) 66%, rgb(195, 255, 0)),
+    linear-gradient(90deg, rgb(60, 255, 0) 33%, rgba(255,255,255,0) 33%, rgba(255,255,255,0) 66%, rgb(136, 255, 0) 66%, rgb(195, 255, 0));
+    background-repeat: no-repeat;
+    background-size: 30px 10px;
+    background-position: 0 0, 0 20px;
+  }
+  .frame-outer:before {
+    left: -10px;
+    top: -10px;
+    z-index: 3;
+  }
+  .frame-outer:after {
+    right: -10px;
+    top: -10px;
+    z-index: 3;
+    background-position: 10px 0, 10px 20px;
+  }
+  .frame-inner:before {
+    left: -30px;
+    bottom: -30px;
+    background-position: 0 10px, 0px 30px;
+  }
+  .frame-inner:after {
+    right: -30px;
+    bottom: -30px;
+    background-position: 10px 10px, 10px 30px;
+  }
+  .frame-inner p {
+    margin: 1% 0% 1%;
+    /*color: rgb(212, 184, 238);*/
+    text-align: justify;
+    text-indent: 5%;
+    font-family: 'Marck Script', cursive;
+    /*font-weight: bold;*/
+    font-size: 24px;
+    line-height: 1.5;
+  }

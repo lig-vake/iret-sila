@@ -7,11 +7,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: larger;
+  /*font-size: larger;*/
+  font-size: 22px;
   background: linear-gradient(to left, rgb(49, 228, 117), rgb(122, 233, 233));
 }
 .header-menu {
-  margin: 0 0 0 60px;
+  color: rgb(108, 0, 158);
+  margin: 0 0 0 80px;
 }
 a {
   text-decoration: none;
@@ -19,7 +21,7 @@ a {
 }
 .login-menu-button {
   cursor: pointer;
-  color: purple;
+  color: rgb(108, 0, 158);
   margin-right: 60px;
   user-select: none;
 }
