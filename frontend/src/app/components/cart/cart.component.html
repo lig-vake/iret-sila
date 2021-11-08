@@ -50,16 +50,33 @@
 </svg><!-- SVGs -->
 <main>
   <div class="view view--grid view--current">
-    <h2 style="margin-left: 200px" >Корзина</h2>
-    <p style="border: 1px solid #ccc;margin-inline: 200px;" >
+    <h2 style="text-align: center; font-size: 40px;" >Корзина</h2>
+
+
+    <p style="border: 1px solid #ccc;margin-inline: 100px;" >
       <input type="checkbox" style="width: 20px; height: 20px;" name="all"/>
       Выбрать все
       <span style="float: right; padding-top: 5px">Удалить выбранные</span>
     </p>
+
+
+    <div style="float: right; width: 300px; margin-right: 50px;" >
+
+      <mat-card style="position: fixed" >
+        <p><label>Общая сумма:</label>{{total}}</p>
+        <p>
+          <button type="submit" >Купить</button>
+        </p>
+      </mat-card>
+
+    </div>
     <app-show
       *ngFor="let i of alboms"
       [albom]="i"
       (onRemove)="removeAlbom($event)"
+      style="margin-right: 600px"
+      (onPlusTotal)="makePlusTotal($event)"
+      (onMinusTotal)="makeMinusTotal($event)"
     ></app-show>
   </div>
 

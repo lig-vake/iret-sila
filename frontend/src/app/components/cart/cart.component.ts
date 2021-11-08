@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Albom, Directions} from "../catalog/catalog.component";
+import {deleteObj} from "./show/show.component";
 
 @Component({
   selector: 'app-cart',
@@ -10,6 +11,7 @@ import {Albom, Directions} from "../catalog/catalog.component";
 export class CartComponent implements OnInit {
   @Input() rok: Directions.Rock
   @Input() jaz: Directions.Jaz
+  total: number = 0
   alboms: Albom[]
   constructor() { }
 
@@ -46,8 +48,19 @@ export class CartComponent implements OnInit {
         direction: this.jaz
       }
     ]
+    for (let i = 0; i < this.alboms.length; i++)
+      this.total = this.total + this.alboms[i].price
+
+
   }
-  removeAlbom(id: number) {
-    this.alboms = this.alboms.filter(albom => albom.id !== id)
+  removeAlbom(obj: deleteObj) {
+    this.alboms = this.alboms.filter(albom => albom.id !== obj.id)
+    this.total = this.total - obj.priceAll
+  }
+  makePlusTotal(price: number) {
+    this.total = this.total + price
+  }
+  makeMinusTotal(price: number) {
+    this.total = this.total - price
   }
 }

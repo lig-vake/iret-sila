@@ -1,6 +1,11 @@
 import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import {Albom} from "../../catalog/catalog.component";
 
+export interface deleteObj {
+  id: number,
+  priceAll: number
+}
+
 @Component({
   selector: 'app-show',
   templateUrl: './show.component.html',
@@ -10,10 +15,14 @@ export class ShowComponent implements OnInit, OnDestroy {
 
   count: number = 1
   priceAll: number = 0
+  deleteObject: deleteObj
   @Input() albom: Albom
-  @Output() onRemove = new EventEmitter<number>()
+  @Output() onRemove = new EventEmitter<deleteObj>()
+  @Output() onPlusTotal = new EventEmitter<number>()
+  @Output() onMinusTotal = new EventEmitter<number>()
   deleteAlbom() {
-    this.onRemove.emit(this.albom.id)
+    this.deleteObject = {id: this.albom.id, priceAll: this.priceAll}
+    this.onRemove.emit(this.deleteObject)
   }
   constructor() { }
 
@@ -23,6 +32,7 @@ export class ShowComponent implements OnInit, OnDestroy {
   }
   increase() {
     this.count++
+    this.onPlusTotal.emit(this.albom.price)
     this.priceAll = this.albom.price * this.count
   }
   decrease(): number {
@@ -30,6 +40,7 @@ export class ShowComponent implements OnInit, OnDestroy {
     else
     {
       this.count = this.count - 1
+      this.onMinusTotal.emit(this.albom.price)
       this.priceAll = this.albom.price * this.count
       return 0
     }
