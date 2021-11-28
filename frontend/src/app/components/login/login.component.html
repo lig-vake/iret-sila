@@ -1,0 +1,9 @@
+ <label>Login</label>
+    <input type="email" matInput placeholder="Введите email..." #email>
+ <br />
+ <br />
+ <label>Password</label>
+    <input type="password" matInput placeholder="Введите password..." #password>
+ <br />
+ <br />
+  <button mat-flat-button color="primary" (click)="login(email.value, password.value)">Login</button>

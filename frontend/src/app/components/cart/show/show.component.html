@@ -7,18 +7,18 @@
             <img style="padding-left: 20px;height: 20px; width: 20px; margin-top: 50px;" src="./assets/img/heart.png" >
           </div>
           <div>
-            <img style="margin-left: 50px;height: 100px; width: 100px; border-radius: 20px;" [src]="albom.img">
+            <img style="margin-left: 50px;height: 100px; width: 100px; border-radius: 20px;" [src]="card.Img_path">
           </div>
           <div style="margin-left: 100px;" >
-            <h2>{{albom.artist}}</h2>
-            <p>{{albom.title}}</p>
+            <h2>{{card.Author}}</h2>
+            <p>{{card.Title}}</p>
           </div>
           <div style="width:180px; margin-left: 50px; margin-top: 30px;">
             <button class="count-buttons__button_minus" (click)="decrease()" >-</button>
             <input class="count-buttons__input" type="text" readonly [value]="count" #Count>
             <button class="count-buttons__button_plus" (click)="increase()" >+</button>
                   <div class="price_pod_knopkoi">
-                    {{albom.price}} Р /шт
+                    {{card.Year}} Р /шт
                   </div>
            </div>
                 <div style="margin-left: 0px; margin-top:50px; float: right;" >
@@ -29,3 +29,5 @@
     <button (click)="deleteAlbom()" >&times;</button>
   </div>
 </mat-card>
+{{card.Author}}
+{{card.Title}}

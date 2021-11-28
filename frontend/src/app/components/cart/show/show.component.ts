@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import {Albom} from "../../catalog/catalog.component";
+import {Card} from "../../../models/card";
 
 export interface deleteObj {
   id: number,
@@ -17,6 +18,7 @@ export class ShowComponent implements OnInit, OnDestroy {
   priceAll: number = 0
   deleteObject: deleteObj
   @Input() albom: Albom
+  @Input() card: Card
   @Output() onRemove = new EventEmitter<deleteObj>()
   @Output() onPlusTotal = new EventEmitter<number>()
   @Output() onMinusTotal = new EventEmitter<number>()

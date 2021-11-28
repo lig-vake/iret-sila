@@ -31,7 +31,17 @@ import {MatMenuModule} from "@angular/material/menu";
 import { GenreMenuComponent } from './components/genre-menu/genre-menu.component';
 import { AuthorPageComponent } from './components/author-page/author-page.component';
 import { AboutComponent } from './components/about/about.component';
+import {AUTH_IP_URL, SHOP_IP_URL} from "./app-injection-tokens";
+import {environment} from "../environments/environment";
+import {JwtModule} from "@auth0/angular-jwt";
+import {ACCESS_TOKEN_KEY} from "./services/auth.service";
+import { LoginComponent } from './components/login/login.component';
+import {HttpClientModule} from "@angular/common/http";
+import {AuthGuard} from "./guards/auth.guard";
 
+export function tokenGetter() {
+  return localStorage.getItem(ACCESS_TOKEN_KEY);
+}
 
 @NgModule({
     declarations: [
@@ -58,26 +68,30 @@ import { AboutComponent } from './components/about/about.component';
         GenreMenuComponent,
         AuthorPageComponent,
         AboutComponent,
+        LoginComponent,
+
     ],
     entryComponents: [
       SettingsComponent
     ],
     imports: [
         BrowserModule,
+        HttpClientModule,
         FormsModule,
         RouterModule.forRoot([
-            {path: '', component: HomePageComponent},
-            {path: 'songs-and-albums', component: SongsAndAlbumsComponent},
-            {path: 'playlist', component: CurrentPlaylistComponent},
-            {path: 'catalog', component: CatalogComponent},
-            {path: 'cart', component: CartComponent},
-            {path: 'albom', component: AlbomComponent},
-            {path: 'album-page', component: AlbumPageComponent},
-            {path: 'lk', component: LkComponent},
-            {path: 'lk/settings', component: LkComponent},
-            {path: 'lk/purchase-history', component: LkComponent},
-            {path: 'author-page', component: AuthorPageComponent},
-            {path: 'about', component: AboutComponent}
+            {path: '', component: LoginComponent},
+            {path: 'home', component: HomePageComponent,  canActivate: [AuthGuard] },
+            {path: 'songs-and-albums', component: SongsAndAlbumsComponent, canActivate: [AuthGuard]},
+            {path: 'playlist', component: CurrentPlaylistComponent, canActivate: [AuthGuard]},
+            {path: 'catalog', component: CatalogComponent,  canActivate: [AuthGuard] },
+            {path: 'cart', component: CartComponent, canActivate: [AuthGuard]},
+            {path: 'albom', component: AlbomComponent, canActivate: [AuthGuard]},
+            {path: 'album-page', component: AlbumPageComponent, canActivate: [AuthGuard]},
+            {path: 'lk', component: LkComponent, canActivate: [AuthGuard]},
+            {path: 'lk/settings', component: LkComponent, canActivate: [AuthGuard]},
+            {path: 'lk/purchase-history', component: LkComponent, canActivate: [AuthGuard]},
+            {path: 'author-page', component: AuthorPageComponent, canActivate: [AuthGuard]},
+            {path: 'about', component: AboutComponent, canActivate: [AuthGuard]},
         ]),
         BrowserAnimationsModule,
         MatInputModule,
@@ -86,8 +100,23 @@ import { AboutComponent } from './components/about/about.component';
         MatSlideToggleModule,
         MatMenuModule,
         ReactiveFormsModule,
+        JwtModule.forRoot({
+        config: {
+          tokenGetter,
+          allowedDomains: ['localhost:44331']
+        }
+        }),
     ],
-  providers: [],
+  providers: [
+    {
+      provide: AUTH_IP_URL,
+      useValue: environment.authApi
+    },
+    {
+      provide: SHOP_IP_URL,
+      useValue: environment.storeApi
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

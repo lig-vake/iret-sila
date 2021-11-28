@@ -71,12 +71,9 @@
 
     </div>
     <app-show
-      *ngFor="let i of alboms"
-      [albom]="i"
-      (onRemove)="removeAlbom($event)"
+      *ngFor="let i of cards"
+      [card]="i"
       style="margin-right: 600px"
-      (onPlusTotal)="makePlusTotal($event)"
-      (onMinusTotal)="makeMinusTotal($event)"
     ></app-show>
   </div>
 
